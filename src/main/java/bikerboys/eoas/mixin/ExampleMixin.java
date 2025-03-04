@@ -36,7 +36,7 @@ public abstract class ExampleMixin extends MerchantEntity {
 	private static void villaaer(CallbackInfoReturnable<DefaultAttributeContainer.Builder> cir) {
 		cir.setReturnValue(
 				cir.getReturnValue()
-						.add(EntityAttributes.TEMPT_RANGE, 16.0) // Adds a 16-block following range
+						.add(EntityAttributes.GENERIC_FOLLOW_RANGE, 10.0) // Adds a 16-block following range
 		);
 
 	}

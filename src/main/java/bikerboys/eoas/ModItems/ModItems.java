@@ -16,21 +16,18 @@ public class ModItems {
     }
 
 
-    public static final Item EMERALD_ON_A_STICK = register("emerald_on_a_stick", Item::new, new Item.Settings().maxCount(1));
 
+    public static final Item EMERALD_ON_A_STICK = register(new Item(new Item.Settings().maxCount(1)), "emerald_on_a_stick");
 
-
-    public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
-        // Create the item key.
-        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Eoas.MOD_ID, name));
-
-        // Create the item instance.
-        Item item = itemFactory.apply(settings.registryKey(itemKey));
+    public static Item register(Item item, String id) {
+        // Create the identifier for the item.
+        Identifier itemID = Identifier.of(Eoas.MOD_ID, id);
 
         // Register the item.
-        Registry.register(Registries.ITEM, itemKey, item);
+        Item registeredItem = Registry.register(Registries.ITEM, itemID, item);
 
-        return item;
+        // Return the registered item!
+        return registeredItem;
     }
 
 

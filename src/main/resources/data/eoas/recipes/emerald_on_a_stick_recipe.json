@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:fishing_rod"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "eoas:emerald_on_a_stick"
+
+  }
+}
